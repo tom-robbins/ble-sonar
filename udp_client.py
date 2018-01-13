@@ -41,18 +41,19 @@ def scan_devices_and_follow():
         packets = ble_sniffer.getPackets()
         for packet in packets:
             if packet.blePacket is not None:
-                addr = ':'.join(["%02X" % x for x in packet.blePacket.advAddress])
-                # Display the raw BLE packet payload
-                # Note: 'BlePacket' is nested inside the higher level 'Packet' wrapper class
-                # if addr in devices:
-                #     # print devices[addr], packet.RSSI
-                #     print addr, packet.RSSI
-                # else:
-                #     devices[addr] = len(devices.keys())
-                #     # print devices[addr], packet.RSSI
-                #     print addr, packet.RSSI
-                print addr, packet.RSSI
-                udp_socket.send('%s %d' % (addr, packet.RSSI))
+                try:
+                    addr = ':'.join(["%02X" % x for x in packet.blePacket.advAddress])
+                    # Display the raw BLE packet payload
+                    # Note: 'BlePacket' is nested inside the higher level 'Packet' wrapper class
+                    # if addr in devices:
+                    #     # print devices[addr], packet.RSSI
+                    #     print addr, packet.RSSI
+                    # else:
+                    #     devices[addr] = len(devices.keys())
+                    #     # print devices[addr], packet.RSSI
+                    #     print addr, packet.RSSI
+                    print addr, packet.RSSI
+                    udp_socket.sendall('%s %d' % (addr, packet.RSSI))
 
 
 
