@@ -3,8 +3,6 @@ import sys
 import time
 import argparse
 
-import pyext
-
 from SnifferAPI import Logger
 from SnifferAPI import Sniffer
 from SnifferAPI import CaptureFiles

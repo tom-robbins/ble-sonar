@@ -138,7 +138,7 @@ class SnifferCollector(Notifications.Notifier):
 
                             newDevice = Devices.Device(address=packet.blePacket.advAddress, name=packet.blePacket.name, RSSI=packet.RSSI, txAdd=packet.txAdd)
                             self._devices.appendOrUpdate(newDevice)
-                            print ':'.join(["%02X" % x for x in packet.blePacket.advAddress]), packet.RSSI
+                            # print ':'.join(["%02X" % x for x in packet.blePacket.advAddress]), packet.RSSI
 
 
             except Exception as e:

@@ -43,8 +43,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 295.0, 140.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 295.0, 140.0, 204.0, 22.0 ],
+					"style" : "",
+					"text" : "/foo/message1 123 456.789001 test"
 				}
 
 			}
@@ -184,14 +185,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "sonar.maxpat",
-				"bootpath" : "~/Google Drive/MUS 314/assignments/final",
+				"bootpath" : "~/Google Drive/MUS 314/assignments/ble-sonar",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "rev3~.maxpat",
-				"bootpath" : "~/Google Drive/MUS 314/assignments/final",
+				"bootpath" : "~/Google Drive/MUS 314/assignments/ble-sonar",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
