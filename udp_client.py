@@ -54,7 +54,8 @@ def scan_devices_and_follow():
                     #     print addr, packet.RSSI
                     print addr, packet.RSSI
                     udp_socket.sendall('%s %d' % (addr, packet.RSSI))
-
+                except:
+                    pass
 
 
 
